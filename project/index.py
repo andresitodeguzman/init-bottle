@@ -1,5 +1,8 @@
 from bottle import route, run, template, get, post, request, static_file, error
+from tinydb import TinyDB, Query, where
 
+db = TinyDB("location_of_db.json")
+q = Query()
 
 # HANDLE ERROR
 @error(404)
